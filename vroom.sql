@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 18, 2019 at 02:33 PM
+-- Generation Time: Nov 18, 2019 at 02:50 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `vroom`
 --
+CREATE DATABASE IF NOT EXISTS `vroom` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `vroom`;
 
 -- --------------------------------------------------------
 
