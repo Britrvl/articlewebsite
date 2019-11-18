@@ -12,9 +12,9 @@ Projet SQL/PHP Site d'articles :: __VROOM__
 - [ ] faire le "part/menu.php" à intégrer ensuite en #include sur toutes les pages .php
 - [ ] fusionner le code bootcrap avec les pages php backend pour que ce soit impressionnant
 - [ ] désactiver les liens devenus inutiles dans "part/menu.php" quand on est loggé
->```php
-<?php echo $link; ?>
-```
+   ```php
+    <?php echo $link; ?>
+    ```
 
 * si c'est fini et que l'on est trop fort :business_suit_levitating:
 - [ ] activation de compte par email SMTP
@@ -73,12 +73,13 @@ Projet SQL/PHP Site d'articles :: __VROOM__
     8) Faire un backoffice de gestion des articles/users (créer, supprimer, etc...)
 
 
-####Neimp :
+#### Neimp :
 
- ```seq
-albert->celestin:  alo
-Note right of celestin:  process();
-celestin-->albert: koi ?
+```seq
+albert->celestin: alo
+Note right of celestin: process();
+celestin-->albert:koi ?
 note left of albert: die();
 ```
+
 ![](https://upload.wikimedia.org/wikipedia/en/8/85/Terminator2poster.jpg)
