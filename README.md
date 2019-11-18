@@ -1,5 +1,35 @@
 # articlewebsite
-Projet SQL/PHP Site d'artiles
+Projet SQL/PHP Site d'articles :: __VROOM__
+
+## propositions d'emplois
+* pages PHP :couple_with_heart_woman_woman:
+- [ ] "logout.php" déconnexion utilisateur ($_SESSION)
+- [ ] "user_infos.php" informations utilisateurs eye_candy
+- [ ] "index.php" qui propose les deux derniers articles et un message de coucou
+- [ ] "articles.php" qui affiche juste tous les articles
+
+* intégrations :man_juggling:
+- [ ] faire le "part/menu.php" à intégrer ensuite en #include sur toutes les pages .php
+- [ ] fusionner le code bootcrap avec les pages php backend pour que ce soit impressionnant
+- [ ] désactiver les liens devenus inutiles dans "part/menu.php" quand on est loggé (<?=;>)
+
+* si c'est fini et que l'on est trop fort :business_suit_levitating:
+- [ ] activation de compte par email SMTP
+- [ ] reset password de compte par email SMTP
+- [ ] moteur de recherche des articles (copy/paste "ex22-form_searchengine")
+
+* pour s'occuper :man_facepalming:
+- [ ] faire le clone de wordpress
+
+### tit's soucis
+
+* pulseaudio, what da hell
+* désactive les journaux systemctl
+* samba 192.168.2.10 ? test déjà ton propre ip.
+* clock win-dos recule d'une heure
+* récupérer anciens favoris, nettoyer historique sur windos
+* logout :: comportement espace taff -> verrouillage
+* installation petit serveur simple SMTP
 
 ## consigne
 
@@ -32,12 +62,3 @@ Projet PHP procédural :
     7) Créer une page avec un moteur de recherche des articles
 
     8) Faire un backoffice de gestion des articles/users (créer, supprimer, etc...)
-
-## tit's soucis
-
-pulseaudio
-désactive les journaux systemctl
-samba 192.168.2.10
-clock win-dos
-récupérer anciens favoris, nettoyer historique
-logout automatique
