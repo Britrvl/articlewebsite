@@ -25,7 +25,7 @@ if(
         }
 
         // vérifie tout ce qui correspond à l'utilisateur qui possède ce mail (ou pas)
-        $response = $bdd->prepare('SELECT * FROM users Where email = ?');
+        $response = $bdd->prepare('SELECT * FROM users WHERE email = ?');
         $response->execute([
             mb_strtolower($_POST['email']),
         ]);
