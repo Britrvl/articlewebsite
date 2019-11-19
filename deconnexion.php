@@ -20,12 +20,12 @@ unset($_SESSION['user']);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Deconnexion</title>
 </head>
-<body>
+<body style="background-image: url('images/deconnexion.jpg')">
     <?php
    include 'menu.php';
     ?>
 
-<p>Vous avez bien été déconnecté !</p>
+<h1 style="color:white">Vous avez bien été déconnecté !</h1>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
