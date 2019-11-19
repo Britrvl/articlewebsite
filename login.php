@@ -33,8 +33,6 @@ if(
         // on fetche tout ça dans le tableau associatif
         $user = $response->fetch(PDO::FETCH_ASSOC);
 
-        // var_dump à virer plus tard
-        var_dump($user['email']);
         // si le mail est NULL (inexistant) : ERROR !
         if(!isset($user['email'])){
             $errors[] = 'email inexistant ou faux !';
@@ -42,7 +40,6 @@ if(
 
             // sinon si le password very est pas bon
             $hash = $user['password'];
-            echo $hash;
             if(!password_verify($_POST['password'], $hash)){
                 $errors[] = 'la vérification du password est mauvaise !';
             } else {
