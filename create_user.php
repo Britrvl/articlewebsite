@@ -1,18 +1,22 @@
 <?php
-
 if(
+    isset($_POST['username']) &&
     isset($_POST['email']) &&
     isset($_POST['password'])
 ){
-        // filters
+    // more protections :: (?=.*[0-9])(?=.*[A-Z])
+    if(!preg_match('/^[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]{1,100}$/', $_POST['username'])){
+    $errors[] = 'Le nom est incorrect !';
+    }
+    // filters
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-        $errors[] = 'email est mauvais !';
+        $errors[] = 'L\'email est incorrect !';
     }
-            // more protections :: (?=.*[0-9])(?=.*[A-Z])
+    // more protections :: (?=.*[0-9])(?=.*[A-Z])
     if(!preg_match('/^(?=.*[a-z]).{8,1000}$/', $_POST['password'])){
-        $errors[] = 'password est mauvais !';
+        $errors[] = 'Le mot de passe est incorrect !';
     }
-        // !error = next
+    // !error = next
     if(!isset($errors)){
         try{
             $bdd = new PDO('mysql:host=localhost;dbname=vroom;charset=utf8', 'root', '');
@@ -26,18 +30,18 @@ if(
         $response = $bdd->prepare('INSERT INTO users(username, email, password, status) VALUES(?,?,?,?)');
 
         $response->execute([
-            // random default name
-            'foobar',
+            // username
+            mb_strtolower($_POST['username']),
             mb_strtolower($_POST['email']),
             // the password hasheeeed
             password_hash($_POST['password'], PASSWORD_BCRYPT),
-            // by default : user = 'u'
-            'u',
+            // by default : Lecteur = 'L'
+            'L',
         ]);
 
         // Vérification BDD
         if($response->rowCount() == 1){
-            $success = 'votre nom d\'utilisateur fut crée avec succès !';
+            $success = 'Votre compte utilisateur a été créé avec succès !';
         } else {
             $errors[] = 'Problème interne, veuillez ré-essayer plus tard';
         }
@@ -61,7 +65,7 @@ if(
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title><?php echo $varExercice; ?></title>
-    
+
 </head>
 <body>
 <!-- Add 2 divs -->
@@ -75,6 +79,7 @@ if(
                     ?>
                         <!-- be carefull the name ! -->
                         <form action="create_user.php" method="POST">
+                        <input type="text" name="username" placeholder="nom"><br><br>
                         <input type="email" name="email" placeholder="email"><br><br>
                         <input type="password" name="password" placeholder="password"><br><br>
                         <input type="submit">
@@ -83,7 +88,7 @@ if(
 
                     <?php
 
-                    // Si $errors existe, on le parcours et on affiche tous ce qu'il contient
+                    // Si $errors existe, on le parcours et on affiche tout ce qu'il contient
                     if(isset($errors)){
                         foreach($errors as $error){
                             echo '<p>' . $error . '</p>';
