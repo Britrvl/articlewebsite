@@ -69,16 +69,16 @@ if(
 </head>
 <body>
 <!-- Add 2 divs -->
-        <h1><?php echo $varExercice; ?></h1>
+        
                 <?php
                 include 'menu.php';
                // en cas de gros succès
                 if(isset($success)){
                     echo '<p>' . $success . '</p>';
                 } else {
-                    ?>
+                    ?><h1><?php echo $varExercice; ?></h1>
                         <!-- be carefull the name ! -->
-                        <form action="create_user.php" method="POST">
+                        <br><form action="create_user.php" method="POST">
                         <input type="text" name="username" placeholder="nom"><br><br>
                         <input type="email" name="email" placeholder="email"><br><br>
                         <input type="password" name="password" placeholder="password"><br><br>

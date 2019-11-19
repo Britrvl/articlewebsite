@@ -47,6 +47,9 @@ if(
                 $errors[] = 'la vérification du password est mauvaise !';
             } else {
                 // SUCCESS mon ami
+                
+                $_SESSION['user'] = $user;
+
                 $success_connexion = 'vous êtes enfin connectés !';
             }
 
