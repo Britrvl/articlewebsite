@@ -59,6 +59,7 @@ if(
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title><?php echo $varExercice; ?></title>
     
 </head>
@@ -66,7 +67,7 @@ if(
 <!-- Add 2 divs -->
         <h1><?php echo $varExercice; ?></h1>
                 <?php
-
+                include 'menu.php';
                // en cas de gros succès
                 if(isset($success)){
                     echo '<p>' . $success . '</p>';
@@ -92,5 +93,8 @@ if(
                 }
 
                 ?>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
