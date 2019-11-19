@@ -63,7 +63,7 @@ if(
 }
 
     // titre php généré
-    $varExercice = 'PHP :: site vroom login';
+    $varExercice = 'Site vroom login';
 
 ?>
 <!DOCTYPE html>
