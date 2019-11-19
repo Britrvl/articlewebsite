@@ -8,6 +8,7 @@ try{
 }catch(Exception $e){
     die($e->getMessage());
 }
+// alo
 //var_dump($_GET);
 //if(isset($_GET['title'])){
     //query dans ce cas (prepare pour recherche)

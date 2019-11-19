@@ -3,16 +3,16 @@ Projet SQL/PHP Site d'articles :: __VROOM__
 
 ## propositions d'emplois
 * pages PHP :couple_with_heart_woman_woman:
-- [X] "logout.php" déconnexion utilisateur ```php <?php session_start(); ?> ```
+- [ ] "logout.php" déconnexion utilisateur ```php <?php session_start(); ?> ```
 - [ ] "user_infos.php" informations utilisateurs eye_candy _en cours_
-- [ ] "index.php" qui propose les deux derniers articles et un message de coucou
-- [ ] "articles.php" qui affiche juste tous les articles
+- [X] "accueil.php" qui propose les deux derniers articles et un message de coucou
+- [X] "articles.php" qui affiche juste tous les articles
 
 * intégrations :man_juggling:
 - [X] Créer 4 articles dans la database
 - [ ] passer par create_user.php pour se faire l'utilisateur: _celestin@gmail.com_ pass : _celestin_
 - [X] faire le "menu.php" à intégrer ensuite en #include sur toutes les pages .php (sauf create_user.php pour le moment)
-- [ ] fusionner le code bootcrap avec les pages php backend pour que ce soit impressionnant _en cours_
+- [X] fusionner le code bootcrap avec les pages php backend pour que ce soit impressionnant _en cours_
 - [ ] désactiver les liens devenus inutiles dans "part/menu.php" quand on est loggé
 ```php
 <?php
@@ -39,13 +39,12 @@ Projet SQL/PHP Site d'articles :: __VROOM__
 * samba 192.168.2.10 ? test déjà ton propre ip.
 * clock win-dos recule d'une heure
 * récupérer anciens favoris, nettoyer historique sur windos
-* logout :: comportement espace taff -> verrouillage
+* [X] logout :: comportement espace taff -> verrouillage
 * installation petit serveur simple SMTP :: postfix
 
 ### consigne
-
 `Projet PHP procédural :`
-
+```text
     Le but est de créer un petit site de gestion et d'affichage d'articles.
 
     Ce site devra être travaillé par groupes et devra être versionné sur un dépôt
@@ -68,7 +67,7 @@ Projet SQL/PHP Site d'articles :: __VROOM__
 
     4) La page d'accueil devra afficher les deux derniers articles parus sur le site en version raccourcis.
 
-    /// BONUS À FAIRE SEULEMENT QUAND TOUT LE RESTE EST FAIT ET VALIDÉ PAR LE FORMATEUR ///
+    ! BONUS À FAIRE SEULEMENT QUAND TOUT LE RESTE EST FAIT ET VALIDÉ PAR LE FORMATEUR
 
     5) Faire un système d'activation de compte par email à l'inscription
 
@@ -77,10 +76,15 @@ Projet SQL/PHP Site d'articles :: __VROOM__
     7) Créer une page avec un moteur de recherche des articles
 
     8) Faire un backoffice de gestion des articles/users (créer, supprimer, etc...)
+```
 
+### creat0rs
+- <https://github.com/Britrvl>
+- <https://github.com/mikhaddo>
+- <https://github.com/Murat389>
+- <>
 
-#### Neimp :
-
+#### Neimp
 ```mermaid
 sequenceDiagram
 albert->>celestin: alo
