@@ -23,8 +23,11 @@ unset($_SESSION['user']);
 <body>
     <?php
    include 'menu.php';
-
     ?>
+<?php
+    if()
+    
+
 <p>Vous avez bien été déconnecté !</p>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
