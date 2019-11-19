@@ -5,7 +5,7 @@ if(
     isset($_POST['password'])
 ){
     // more protections :: (?=.*[0-9])(?=.*[A-Z])
-    if(!preg_match('/^[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]{1,100}$/', $_POST['username'])){
+    if(!preg_match('/^[a-zA-Z \.\-\_àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]{1,100}$/', $_POST['username'])){
     $errors[] = 'Le nom est incorrect !';
     }
     // filters
@@ -31,7 +31,7 @@ if(
 
         $response->execute([
             // username
-            mb_strtolower($_POST['username']),
+            $_POST['username'],
             mb_strtolower($_POST['email']),
             // the password hasheeeed
             password_hash($_POST['password'], PASSWORD_BCRYPT),
