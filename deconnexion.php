@@ -24,9 +24,6 @@ unset($_SESSION['user']);
     <?php
    include 'menu.php';
     ?>
-<?php
-    if()
-    
 
 <p>Vous avez bien été déconnecté !</p>
 
