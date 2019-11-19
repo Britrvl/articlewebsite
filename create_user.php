@@ -50,7 +50,7 @@ if(
 }
 
     // titre php généré
-    $varExercice = 'PHP :: site vroom';
+    $varExercice = 'Veuillez créer votre compte';
 
 ?>
 <!DOCTYPE html>
@@ -60,10 +60,11 @@ if(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $varExercice; ?></title>
+    
 </head>
 <body>
-
-    <h1><?php echo $varExercice; ?></h1>
+<!-- Add 2 divs -->
+        <h1><?php echo $varExercice; ?></h1>
                 <?php
 
                // en cas de gros succès
@@ -73,8 +74,8 @@ if(
                     ?>
                         <!-- be carefull the name ! -->
                         <form action="create_user.php" method="POST">
-                        <input type="email" name="email" placeholder="email">
-                        <input type="password" name="password" placeholder="password">
+                        <input type="email" name="email" placeholder="email"><br><br>
+                        <input type="password" name="password" placeholder="password"><br><br>
                         <input type="submit">
 
                     </form>
@@ -91,6 +92,5 @@ if(
                 }
 
                 ?>
-
 </body>
 </html>
