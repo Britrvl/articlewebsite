@@ -3,18 +3,24 @@ Projet SQL/PHP Site d'articles :: __VROOM__
 
 ## propositions d'emplois
 * pages PHP :couple_with_heart_woman_woman:
-- [ ] "logout.php" déconnexion utilisateur ```php <?php session_start(); ?> ```
-- [ ] "user_infos.php" informations utilisateurs eye_candy
+- [X] "logout.php" déconnexion utilisateur ```php <?php session_start(); ?> ```
+- [ ] "user_infos.php" informations utilisateurs eye_candy _en cours_
 - [ ] "index.php" qui propose les deux derniers articles et un message de coucou
 - [ ] "articles.php" qui affiche juste tous les articles
 
 * intégrations :man_juggling:
-- [ ] faire le "part/menu.php" à intégrer ensuite en #include sur toutes les pages .php
-- [ ] fusionner le code bootcrap avec les pages php backend pour que ce soit impressionnant
+- [X] Créer 4 articles dans la database
+- [ ] passer par create_user.php pour se faire l'utilisateur: _celestin@gmail.com_ pass : _celestin_
+- [X] faire le "menu.php" à intégrer ensuite en #include sur toutes les pages .php (sauf create_user.php pour le moment)
+- [ ] fusionner le code bootcrap avec les pages php backend pour que ce soit impressionnant _en cours_
 - [ ] désactiver les liens devenus inutiles dans "part/menu.php" quand on est loggé
-   ```php
-    <?php echo $link; ?>
-    ```
+```php
+<?php
+    if(!isset($_SESSION['user'])){
+        echo '<li><a href="create.php">connex</a></li>';
+    }
+?>
+```
 
 * si c'est fini et que l'on est trop fort :business_suit_levitating:
 - [ ] activation de compte par email SMTP
@@ -75,10 +81,11 @@ Projet SQL/PHP Site d'articles :: __VROOM__
 
 #### Neimp :
 
-```seq
-albert->celestin: alo
-Note right of celestin: process();
-celestin-->albert:koi ?
+```mermaid
+sequenceDiagram
+albert->>celestin: alo
+note right of celestin: process();
+celestin-->>albert:koi ?
 note left of albert: die();
 ```
 
